@@ -18,6 +18,13 @@ Special focus is given to:
 - **Real-world data quality issues**
 
 ---
+## ⭐ Project Highlights
+
+- End-to-end Machine Learning pipeline
+- Imbalanced data handling & recall optimization
+- Feature engineering with domain knowledge
+- Interactive Streamlit deployment
+
 
 ## 📂 Project Structure
 
@@ -44,7 +51,7 @@ Special focus is given to:
 - Month-to-month contracts have significantly higher churn rates.
 - Fiber Optic users show higher dissatisfaction.
 - New customers churn more frequently during the first months.
-  -Senior customers combined with low tenure exhibit higher churn risk
+- Senior customers combined with low tenure exhibit higher churn risk
 
 ## 📈 Model Performance & Evolution
 
@@ -54,6 +61,15 @@ Special focus is given to:
 - 26% Churn customers
 
 A naive model achieves high accuracy but fails to detect churners.
+
+## 💼 Business Impact
+
+By prioritizing recall over raw accuracy, this model helps the business:
+
+- Detect at-risk customers earlier
+- Reduce churn-related revenue loss
+- Enable proactive retention strategies
+
 
 ### ✅ Solution Strategy
 
@@ -71,6 +87,16 @@ A naive model achieves high accuracy but fails to detect churners.
 | **GridSearch XGBoost**             | 80.9%     | 46.0%                    |                                                                             |
 | **Weighted XGBoost (Selected) 🌟** | **75.0%** | **82.5%**                | **Best Model.** Sacrificed some accuracy to catch 82% of leaving customers. |
 
+## 🧠 Feature Engineering
+
+Several domain-driven features were engineered to improve model performance:
+
+- `Yasli_Kidem_Etkisi`: Interaction between seniority and tenure
+- Contract duration encoded via one-hot encoding
+- Service-based boolean indicators for customer behavior modeling
+
+
+
 ## ▶️ How to Run
 
 ```bash
@@ -78,3 +104,11 @@ git clone https://github.com/fferhatakr/Telco-Customer-Churn-Prediction.git
 cd Telco-Customer-Churn-Prediction
 pip install pandas numpy matplotlib seaborn scikit-learn
 ```
+## 🖥️ Interactive Demo (Streamlit)
+
+A Streamlit web application was developed to demonstrate real-time churn predictions.
+
+### Run the App Locally
+```bash
+pip install streamlit xgboost
+streamlit run app.py
